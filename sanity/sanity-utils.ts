@@ -25,15 +25,10 @@
 import { createClient, groq } from "next-sanity";
 import { Project } from "@/types/Project";
 import { News } from "@/types/News";
+import clientConfig from "./config/client-config";
 
 export async function getProjects(): Promise<Project[]> {
-  const client = createClient({
-    projectId: "ivylruw4",
-    dataset: "production",
-    apiVersion: "2023-08-21",
-  });
-
-  return client.fetch(
+  return createClient(clientConfig).fetch(
     groq`*[_type == "project"]{
       _id,
       _createdAt,
@@ -47,13 +42,13 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getNews(): Promise<News[]> {
-  const client = createClient({
-    projectId: "ivylruw4",
-    dataset: "production",
-    apiVersion: "2023-08-17",
-  });
+  // const client = createClient({
+  //   projectId: "ivylruw4",
+  //   dataset: "production",
+  //   apiVersion: "2023-08-17",
+  // });
 
-  const response = await client.fetch(
+  const response = await createClient(clientConfig).fetch(
     groq`*[_type == "homepage"][0] {
       "newsItems": pages[_type == "news"] {
         heading,
