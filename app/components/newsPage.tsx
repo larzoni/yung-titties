@@ -75,10 +75,10 @@ export default async function NewsPage() {
                 />
               </div>
               <div className="rounded-lg w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] md:ml-8 flex flex-col justify-center items-center md:text-center bg-gray-300 mt-4 md:mt-0">
-                <h2 className="text-1xl mx-2 md:text-2xl font-semibold mb-2">
+                <h2 className="uppercase text-lg lg:text-2xl mx-5 mt-0 mb-5 font-semibold">
                   {news.songtitle}
                 </h2>
-                <div className="text-black text-center p-5 text-mg md:text-lg">
+                <div className=" text-gray-600 text-center overflow-auto max-h-32 md:max-h-none px-5 lg:text-lg text-sm">
                   <PortableText
                     value={news.aboutrelease} // Use 'blocks' prop instead of 'value'
                   />
@@ -87,7 +87,7 @@ export default async function NewsPage() {
                   href={news.songlink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 mb-4 inline-block rounded-lg px-10 py-2 bg-green-500 text-black font-semibold hover:bg-green-600 transition duration-300"
+                  className="mt-10 mb-4 inline-block rounded-lg px-10 py-2 bg-green-500 text-black font-semibold hover:text-white hover:bg-green-600 transition duration-300"
                 >
                   Listen Now
                 </a>
