@@ -17,17 +17,12 @@ export default function Banner() {
       <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 text-center">
         <h1
           id="heading"
-          className="font-staatliches text-7xl font-title text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl whitespace-nowrap"
+          className="font-staatliches text-7xl font-title sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl whitespace-nowrap"
           style={{ color: "#FFF200" }}
         >
           YUNG TITTIES
         </h1>
       </div>
-      {/* Font Import */}
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-      </style>
     </section>
   );
 }

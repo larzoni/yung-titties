@@ -34,6 +34,7 @@ export default defineType({
         hotspot: true,
       },
       title: "Image",
+      fields: [{ name: "alt", title: "Alt", type: "string" }],
       //description: "Upload a picture of you",
       validation: (rule) => rule.required(),
     }),
