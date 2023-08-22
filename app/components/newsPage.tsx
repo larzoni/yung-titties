@@ -34,6 +34,7 @@
 import { getNews } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import { News } from "@/types/News";
+import { PortableText } from "@portabletext/react";
 
 export default async function NewsPage() {
   const newsItems: News[] = await getNews();
@@ -73,11 +74,15 @@ export default async function NewsPage() {
                   priority
                 />
               </div>
-              <div className="w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] md:ml-8 flex flex-col justify-center items-center md:text-center bg-gray-600 mt-4 md:mt-0">
+              <div className="rounded-lg w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] md:ml-8 flex flex-col justify-center items-center md:text-center bg-gray-300 mt-4 md:mt-0">
                 <h2 className="text-1xl mx-2 md:text-2xl font-semibold mb-2">
                   {news.songtitle}
                 </h2>
-                <p className="text-gray-600">{/* Your text here */}</p>
+                <div className="text-black text-center p-5 text-mg md:text-lg">
+                  <PortableText
+                    value={news.aboutrelease} // Use 'blocks' prop instead of 'value'
+                  />
+                </div>
                 <a
                   href={news.songlink}
                   target="_blank"

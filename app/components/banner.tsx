@@ -1,6 +1,6 @@
 export default function Banner() {
   return (
-    <section className="relative h-[95vh] overflow-hidden">
+    <section className="relative h-[100vh] overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -17,7 +17,7 @@ export default function Banner() {
       <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 text-center">
         <h1
           id="heading"
-          className="font-staatliches text-8xl font-title text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl"
+          className="font-staatliches text-8xl font-title text-white sm:text-6xl md:text-7xl lg:text-8xl xl:text-10xl whitespace-nowrap"
           style={{ color: "#FFF200" }}
         >
           YUNG TITTIES
