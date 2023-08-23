@@ -1,3 +1,6 @@
+"use client";
+import Navbar from "./navBar";
+
 export default function Banner() {
   return (
     <section className="relative h-[100vh] overflow-hidden">
@@ -22,6 +25,9 @@ export default function Banner() {
         >
           YUNG TITTIES
         </h1>
+        <div>
+          <Navbar />
+        </div>
       </div>
     </section>
   );

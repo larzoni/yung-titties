@@ -6,8 +6,12 @@ export default function Home() {
   return (
     <div>
       <Banner />
-      <NewsPage />
-      <About />
+      <div id="News">
+        <NewsPage />
+      </div>
+      <div id="About">
+        <About />
+      </div>
     </div>
   );
 }

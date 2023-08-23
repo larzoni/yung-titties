@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap");
+
+.navItems {
+  font-family: "Staatliches", cursive;
+  color: #fff200;
+}
+
+.navItems:hover {
+  font-family: "Libre Barcode 39", cursive;
+  color: #fff200;
+}
+
+.sectionHeadings {
+  color: #fff200;
+}

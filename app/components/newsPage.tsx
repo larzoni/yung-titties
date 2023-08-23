@@ -35,7 +35,8 @@ import { getNews } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import { News } from "@/types/News";
 import { PortableText } from "@portabletext/react";
-import styles from "./button.module.css";
+import styles from "../styles/button.module.css";
+import headings from "../styles/fonts.module.css";
 
 export default async function NewsPage() {
   const newsItems: News[] = await getNews();
@@ -59,7 +60,7 @@ export default async function NewsPage() {
       <div className="relative z-0 py-0 md:px-0">
         <h1
           // style={{ color: "#FFF200" }}
-          className="font-staatliches uppercase text-yellow-500 text-5xl font-semibold text-white mb-0 md:mb-10 md:text-7xl text-center"
+          className={`${headings.sectionHeadings} font-staatliches uppercase text-yellow-500 text-5xl font-semibold text-white mb-0 md:mb-10 md:text-7xl text-center`}
         >
           {newsItems[0]?.heading || "News"}
         </h1>
