@@ -59,7 +59,7 @@ export default async function NewsPage() {
       <div className="relative z-0 py-0 md:px-0">
         <h1
           // style={{ color: "#FFF200" }}
-          className="font-staatliches uppercase text-yellow-500 text-5xl font-semibold text-white mb-0 md:text-7xl text-center"
+          className="font-staatliches uppercase text-yellow-500 text-5xl font-semibold text-white mb-0 md:mb-10 md:text-7xl text-center"
         >
           {newsItems[0]?.heading || "News"}
         </h1>
@@ -86,7 +86,7 @@ export default async function NewsPage() {
                 <h2 className="uppercase text-lg lg:text-2xl mx-5 mt-0 mb-5 font-semibold">
                   {news.songtitle}
                 </h2>
-                <div className=" text-gray-600 text-center overflow-auto max-h-32 md:max-h-none px-5 lg:text-lg text-sm">
+                <div className=" text-gray-600 text-center md:max-h-none px-5 lg:text-lg text-sm">
                   <PortableText value={news.aboutrelease} />
                 </div>
 
