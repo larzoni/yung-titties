@@ -33,18 +33,11 @@ export default defineType({
       description: "Link to the event",
     }),
     defineField({
-      title: "Upcoming or Past Gig?",
+      title: "Upcoming gig?",
       name: "gigStatus",
       description: "Is it a future gig or a past gig?",
-      type: "string",
+      type: "boolean",
       validation: (Rule) => Rule.required().warning("Answer this"),
-      options: {
-        list: [
-          { title: "Upcoming", value: "upcoming" },
-          { title: "Past", value: "past" },
-        ], // <-- predefined values
-        layout: "radio", // <-- defaults to 'dropdown'
-      },
     }),
   ],
   preview: {

@@ -2,6 +2,7 @@ import { createClient, groq } from "next-sanity";
 import { Project } from "@/types/Project";
 import { News } from "@/types/News";
 import { About } from "@/types/About";
+import { Gigs } from "@/types/Gigs";
 import clientConfig from "./config/client-config";
 
 // export async function getProjects(): Promise<Project[]> {
@@ -45,4 +46,17 @@ export async function getAbout(): Promise<About[]> {
     }`
   );
   return response.aboutItems;
+}
+export async function getGigs(): Promise<Gigs[]> {
+  const response = await createClient(clientConfig).fetch(
+    groq`*[_type == "homepage"][0] {
+      "gigItems": gigs[_type == "gigs"] {
+        date,
+        location,
+        tickets,
+        gigStatus
+      }
+    }`
+  );
+  return response.gigItems;
 }

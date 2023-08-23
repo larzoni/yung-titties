@@ -1,6 +1,7 @@
 import NewsPage from "./components/newsPage"; // Adjust the path based on your actual file structure
 import Banner from "./components/banner";
 import About from "./components/about";
+import Gigs from "./components/gigs";
 
 export default function Home() {
   return (
@@ -11,6 +12,9 @@ export default function Home() {
       </div>
       <div id="About">
         <About />
+      </div>
+      <div id="Gigs">
+        <Gigs />
       </div>
     </div>
   );
