@@ -1,4 +1,4 @@
-import { createClient, groq } from "next-sanity";
+import { createClient, groq, FilteredResponseQueryOptions } from "next-sanity";
 import { Project } from "@/types/Project";
 import { News } from "@/types/News";
 import { About } from "@/types/About";
@@ -19,6 +19,10 @@ import clientConfig from "./config/client-config";
 //   );
 // }
 
+const fetchOptions: FilteredResponseQueryOptions = {
+  cache: "no-cache",
+};
+
 export async function getNews(): Promise<News[]> {
   const response = await createClient(clientConfig).fetch(
     groq`*[_type == "homepage"][0] {
@@ -30,7 +34,9 @@ export async function getNews(): Promise<News[]> {
         'alt': coverart.alt,
         aboutrelease
       }
-    }`
+    }`,
+    {},
+    fetchOptions
   );
   return response.newsItems;
 }
@@ -43,7 +49,9 @@ export async function getAbout(): Promise<About[]> {
         'image': image.asset->url,
         'alt': image.alt,
       }
-    }`
+    }`,
+    {},
+    fetchOptions
   );
   return response.aboutItems;
 }
@@ -56,7 +64,9 @@ export async function getGigs(): Promise<Gigs[]> {
         tickets,
         gigStatus
       }
-    }`
+    }`,
+    {},
+    fetchOptions
   );
   return response.gigItems;
 }

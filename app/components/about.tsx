@@ -6,7 +6,7 @@ import { PortableText } from "@portabletext/react";
 export default async function AboutComponent() {
   const aboutItems: About[] = await getAbout();
   return (
-    <section className="relative -mt-20 py-20 overflow-hidden z-[-1] bg-black">
+    <section className="relative -mt-20 py-20 bg-black">
       {aboutItems.map((about) => (
         <section
           key={about._id}
@@ -30,7 +30,7 @@ export default async function AboutComponent() {
               <h2 className="uppercase text-white text-lg lg:text-2xl mx-5 mt-0 mb-5 md:py-10 font-semibold">
                 {about.heading}
               </h2>
-              <div className="overflow-auto p-5 hover:overflow-scroll md:h-full h-[20rem]">
+              <div className="p-5 overflow-scroll md:h-full h-[20rem]">
                 <PortableText value={about.about} />
               </div>
             </div>
