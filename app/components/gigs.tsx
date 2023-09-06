@@ -32,7 +32,7 @@ export default async function Gigs() {
             <div
               key={gig._id}
               className={`mb-5 md:text-left text-center p-5 rounded-lg backdrop-blur-md shadow-md bg-opacity-0 ${
-                gig.gigStatus === "false"
+                gig.gigStatus === false
                   ? "bg-gray-700 bg-opacity-10"
                   : "bg-gray-400 bg-opacity-10"
               }`}
@@ -40,20 +40,20 @@ export default async function Gigs() {
               <div className="mb-2 md:flex md:justify-between md:items-center">
                 <p
                   className={`text-lg md:text-left text-center md:text-2xl font-semibold ${
-                    gig.gigStatus === "false" ? "text-gray-500 " : "text-white"
+                    gig.gigStatus === false ? "text-gray-500 " : "text-white"
                   }`}
                 >
                   {gig.location}
                 </p>
                 <p
                   className={`text-gray-400 md:text-lg mt-1 md:mt-0 ${
-                    gig.gigStatus === "false" ? "text-gray-600" : ""
+                    gig.gigStatus === false ? "text-gray-600" : ""
                   }`}
                 >
                   {new Date(gig.date).toLocaleString()}
                 </p>
               </div>
-              {gig.gigStatus === "false" ? (
+              {gig.gigStatus === false ? (
                 <p className="text-red-900 text-center">No tickets available</p>
               ) : (
                 <div className="text-center">

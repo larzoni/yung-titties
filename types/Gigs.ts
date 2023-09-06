@@ -4,6 +4,6 @@ export type Gigs = {
   date: string;
   location: string;
   tickets: string;
-  gigStatus: string;
+  gigStatus: boolean;
   // Adding other properties as needed
 };

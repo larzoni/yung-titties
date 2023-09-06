@@ -1,8 +1,34 @@
+import { useState, useEffect, useRef } from "react";
+
 import styles from "../styles/fonts.module.css";
 
 export default function Navbar() {
+  const [isSticky, setIsSticky] = useState(false);
+  const navEl = useRef();
+
+  useEffect(() => {
+    const navElRect = navEl.current.getBoundingClientRect();
+    console.log(navElRect);
+
+    function handleScroll() {
+      setIsSticky(window.scrollY > navElRect.top);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="relative rounded-lg bg-white backdrop-blur-sm md:backdrop-blur-md bg-opacity-0 shadow-md duration-300 ease-in-out w-full md:flex md:justify-center md:items-center md:flex-col">
+    <nav
+      className={`
+        rounded-lg
+        bg-white backdrop-blur-sm md:backdrop-blur-md bg-opacity-0 shadow-md duration-300 ease-in-out w-full md:flex md:justify-center md:items-center md:flex-col
+        top-0
+        ${isSticky ? "fixed" : "relative"}
+      `}
+      ref={navEl}
+    >
       <div className="md:flex">
         <a
           href="#News"
