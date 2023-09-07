@@ -88,8 +88,9 @@ export default function Navbar() {
         >
           <div className="w-full h-1/2 bg-black bg-opacity-90 text-white text-3xl md:text-4xl flex justify-center items-center">
             <button
-              className="text-white text-3xl md:text-4xl absolute top-4 right-4 cursor-pointer"
+              className=" text-3xl md:text-4xl absolute top-4 right-4 cursor-pointer"
               onClick={toggleMobileMenu}
+              color="#fff200"
             >
               ✕
             </button>
