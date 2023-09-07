@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-
 import styles from "../styles/fonts.module.css";
 
 export default function Navbar() {
