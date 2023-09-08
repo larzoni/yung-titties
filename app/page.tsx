@@ -11,6 +11,7 @@ export default function Home() {
       <div id="News">
         <NewsPage />
       </div>
+
       <div id="About">
         <About />
       </div>

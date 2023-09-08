@@ -1,3 +1,4 @@
+"use client";
 // import { getNews } from "@/sanity/sanity-utils";
 // import Image from "next/image";
 // import { News } from "@/types/News";
@@ -37,6 +38,7 @@ import { News } from "@/types/News";
 import { PortableText } from "@portabletext/react";
 import styles from "../styles/button.module.css";
 import headings from "../styles/fonts.module.css";
+import NewsScroll from "./newsScroll";
 
 export default async function NewsPage() {
   const newsItems: News[] = await getNews();
@@ -57,13 +59,8 @@ export default async function NewsPage() {
         <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black to-t"></div>
       </div>
       {/* News banner */}
-      <div className="relative z-0 py-0 md:px-0">
-        <h1
-          // style={{ color: "#FFF200" }}
-          className={`${headings.sectionHeadings} font-staatliches uppercase text-yellow-500 text-5xl font-semibold text-white mb-0 md:mb-10 md:text-7xl text-center`}
-        >
-          {newsItems[0]?.heading || "News"}
-        </h1>
+      <div className="relative z-0 py-10 md:px-0">
+        <NewsScroll newsText={newsItems[0]?.heading || "News"} />
       </div>
       {/* News Content */}
       <section className="relative">

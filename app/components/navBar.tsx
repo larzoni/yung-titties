@@ -88,33 +88,45 @@ export default function Navbar() {
         >
           <div className="w-full h-1/2 bg-black bg-opacity-90 text-white text-3xl md:text-4xl flex justify-center items-center">
             <button
-              className="text-white text-3xl md:text-4xl absolute top-4 right-4 cursor-pointer"
+              className={`${styles.navItems} text-3xl md:text-4xl absolute top-4 right-4 cursor-pointer`}
               onClick={toggleMobileMenu}
             >
               ✕
             </button>
             <ul className="text-center space-y-4 mt-12">
               <li>
-                <a href="#News" className="text-4xl hover:underline" key="news">
+                <a
+                  href="#News"
+                  className={`${styles.navItems} z-10 block mt-2 px-2 md:px-4 py-2 hover:py-0 hover:px-3 uppercase text-3xl md:text-4xl transition duration-300 mx-10 mhover:mx-9 hover:text-4xl md:hover:text-5xl hover:underline`}
+                  key="news"
+                >
                   News
                 </a>
               </li>
               <li>
                 <a
                   href="#About"
-                  className="text-4xl hover:underline"
+                  className={`${styles.navItems} z-10 block mt-2 px-2 md:px-4 py-2 hover:py-0 hover:px-3 uppercase text-3xl md:text-4xl transition duration-300 mx-10 mhover:mx-9 hover:text-4xl md:hover:text-5xl hover:underline`}
                   key="about"
                 >
                   About
                 </a>
               </li>
               <li>
-                <a href="#Gigs" className="text-4xl hover:underline" key="gigs">
+                <a
+                  href="#Gigs"
+                  className={`${styles.navItems} z-10 block mt-2 px-2 md:px-4 py-2 hover:py-0 hover:px-3 uppercase text-3xl md:text-4xl transition duration-300 mx-10 mhover:mx-9 hover:text-4xl md:hover:text-5xl hover:underline`}
+                  key="gigs"
+                >
                   Gigs
                 </a>
               </li>
               <li>
-                <a href="#" className="text-4xl hover:underline" key="contact">
+                <a
+                  href="#"
+                  className={`${styles.navItems} z-10 block mt-2 px-2 md:px-4 py-2 hover:py-0 hover:px-3 uppercase text-3xl md:text-4xl transition duration-300 mx-10 mhover:mx-9 hover:text-4xl md:hover:text-5xl hover:underline`}
+                  key="contact"
+                >
                   Contact
                 </a>
               </li>
