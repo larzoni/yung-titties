@@ -21,9 +21,10 @@ export default async function Gigs() {
         <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black to-t"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto p-5 md:p-0">
+      <div className="max-w-4xl mx-auto p-0 md:p-0">
         <h1
-          className={`text-white mt-5 md:mt-20 z-10 ${headings.sectionHeadings} font-staatliches uppercase text-3xl font-bold mb-20 text-center relative`}
+          className="from-yellow-500 via-yellow-100 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent mt-0 md:mt-10 z-10 font-staatliches uppercase text-3xl lg:text-4xl font-bold mb-20 text-center relative"
+          // "text-lg lg:text-5xl uppercase mx-5 mt-0 mb-5 md:py-10 text-center font-extrabold from-yellow-500 via-yellow-100 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent"
         >
           SEE US LIVE!
         </h1>

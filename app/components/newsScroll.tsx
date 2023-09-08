@@ -33,7 +33,11 @@ const NewsScroll = ({ newsText }) => {
         >
           {[...Array(repeatCount)].map((_, index) => (
             <div key={index} className="inline-block mx-3">
-              <span className="text-yellow-500 textItem whitespace-nowrap font-staatliches uppercase text-5xl font-semibold text-white mb-0 md:mb-10 md:text-7xl">
+              <span
+                className="textItem whitespace-nowrap text-5xl md:text-7xl font-staatliches uppercase bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-yellow-500 to-yellow-300/[.85] text-5xl font-black "
+
+                // "text-yellow-500 textItem whitespace-nowrap font-staatliches uppercase text-5xl font-semibold text-white mb-0 md:mb-10 md:text-7xl"
+              >
                 {newsText}
               </span>
             </div>
