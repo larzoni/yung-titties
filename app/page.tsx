@@ -3,6 +3,7 @@ import Banner from "./components/banner";
 import About from "./components/about";
 import Gigs from "./components/gigs";
 import Socials from "./components/socials";
+import Contact from "./components/contact";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
       </div>
       <div id="Gigs">
         <Gigs />
+      </div>
+      <div id="Contact">
+        <Contact />
       </div>
       <Socials />
     </div>
