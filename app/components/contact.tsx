@@ -38,12 +38,12 @@ export default function ContactForm() {
 
   return (
     <div className="mx-auto bg-black w-full h-full px-10 py-20 ">
-      <h1 className="from-yellow-500 via-yellow-100 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent mt-0 md:mt-10 z-10 font-staatliches uppercase text-3xl lg:text-4xl font-bold mb-20 text-center relative">
+      <h1 className="from-yellow-500 via-yellow-100 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent mt-0 md:mt-10 z-10 font-staatliches uppercase text-3xl lg:text-4xl font-bold mb-10 text-center relative">
         Contact Us
       </h1>
       <form onSubmit={handleSubmit}>
-        <div className="w-5/6 flex mx-auto mb-5">
-          <div className="w-1/2 flex flex-col">
+        <div className="md:w-5/6 md:flex mx-auto mb-5">
+          <div className="md:w-1/2 w-full flex flex-col">
             <label htmlFor="name" className=" font-bold text-gray-200  mb-2">
               Name
             </label>
@@ -57,7 +57,7 @@ export default function ContactForm() {
               className="bg-gray-50 border-gray-100 h-10 border rounded-md p-2"
             />
           </div>
-          <div className="w-1/2 flex flex-col ml-4">
+          <div className="md:w-1/2 w-full flex flex-col md:ml-10 mt-4 md:mt-0">
             <label htmlFor="email" className="font-bold text-gray-200 mb-2">
               Email
             </label>
@@ -73,7 +73,7 @@ export default function ContactForm() {
           </div>
         </div>
         <div>
-          <label htmlFor="message" className=" font-bold text-gray-200 mb-2">
+          <label htmlFor="message" className=" font-bold text-gray-200 mb-5">
             Message
           </label>
           <textarea
@@ -83,13 +83,13 @@ export default function ContactForm() {
             minLength={10}
             maxLength={500}
             placeholder="Write your message here"
-            className="bg-gray-50 border-gray-100 w-full  border rounded-md p-2"
+            className="bg-gray-50 border-gray-100 w-full  border rounded-md p-2 mt-4"
           />
         </div>
         <button
           type="submit"
           disabled={loading}
-          className="px-5 py-2 mt-4 w-40 bg-gray-700 text-white font-medium disabled:bg-gray-400 disabled:text-gray-100"
+          className="px-5 py-2 mt-4 w-40 bg-gray-700 text-white font-medium disabled:bg-gray-400 disabled:text-gray-100 border rounded-md"
         >
           Send Message
         </button>
