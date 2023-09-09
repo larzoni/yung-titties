@@ -14,14 +14,26 @@ export default defineType({
   },
   fields: [
     {
-      title: "Twitter",
-      name: "twitter",
+      title: "Tiktok",
+      name: "tiktok",
       type: "url",
       fieldset: "social",
     },
     {
       title: "Instagram",
       name: "instagram",
+      type: "url",
+      fieldset: "social",
+    },
+    {
+      title: "Spotify",
+      name: "spotify",
+      type: "url",
+      fieldset: "social",
+    },
+    {
+      title: "Youtube",
+      name: "youtube",
       type: "url",
       fieldset: "social",
     },

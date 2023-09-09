@@ -3,6 +3,7 @@ import { Project } from "@/types/Project";
 import { News } from "@/types/News";
 import { About } from "@/types/About";
 import { Gigs } from "@/types/Gigs";
+import { Socials } from "@/types/Socials";
 import clientConfig from "./config/client-config";
 
 // export async function getProjects(): Promise<Project[]> {
@@ -69,4 +70,20 @@ export async function getGigs(): Promise<Gigs[]> {
     fetchOptions
   );
   return response.gigItems;
+}
+export async function getSocials(): Promise<Socials> {
+  const response = await createClient(clientConfig).fetch(
+    groq`*[_type == "homepage"][0] {
+      "socials": socials {
+        instagram,
+        spotify,
+        youtube,
+        facebook,
+        tiktok
+      }
+    }`,
+    {},
+    fetchOptions
+  );
+  return response.socials;
 }
