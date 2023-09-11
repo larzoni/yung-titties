@@ -63,7 +63,7 @@ export default function Navbar() {
           Gigs
         </a>
         <a
-          href="#"
+          href="#Contact"
           className={`${styles.navItems} z-10 block mt-2 px-2 md:px-4 py-2 hover:py-0 hover:px-3 uppercase text-3xl md:text-4xl transition duration-300 mx-10 mhover:mx-9 hover:text-4xl md:hover:text-5xl hover:underline`}
         >
           Contact
@@ -123,7 +123,7 @@ export default function Navbar() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#Contact"
                   className={`${styles.navItems} z-10 block mt-2 px-2 md:px-4 py-2 hover:py-0 hover:px-3 uppercase text-3xl md:text-4xl transition duration-300 mx-10 mhover:mx-9 hover:text-4xl md:hover:text-5xl hover:underline`}
                   key="contact"
                 >

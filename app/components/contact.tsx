@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
+
   async function handleSubmit(event: any) {
     event.preventDefault();
     setLoading(true);
