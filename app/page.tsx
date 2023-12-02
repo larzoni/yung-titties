@@ -1,4 +1,4 @@
-import NewsPage from "./components/newsPage"; // Adjust the path based on your actual file structure
+import NewsPage from "./components/newsPage";
 import Banner from "./components/banner";
 import About from "./components/about";
 import Gigs from "./components/gigs";

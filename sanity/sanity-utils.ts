@@ -1,24 +1,10 @@
 import { createClient, groq, FilteredResponseQueryOptions } from "next-sanity";
-import { Project } from "@/types/Project";
 import { News } from "@/types/News";
 import { About } from "@/types/About";
 import { Gigs } from "@/types/Gigs";
 import { Socials } from "@/types/Socials";
 import clientConfig from "./config/client-config";
 
-// export async function getProjects(): Promise<Project[]> {
-//   return createClient(clientConfig).fetch(
-//     groq`*[_type == "project"]{
-//       _id,
-//       _createdAt,
-//       name,
-//       "slug": slug.current,
-//       "image": image.asset->url,
-//       url,
-//       content
-//     }`
-//   );
-// }
 
 const fetchOptions: FilteredResponseQueryOptions = {
   cache: "no-cache",
