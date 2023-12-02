@@ -5,6 +5,6 @@ import gigs from "./objects/gigs";
 import socials from "./objects/socials";
 import project from "./project-schema";
 
-const schemas = [homepage, news, about, socials, gigs, project];
+const schemas = [homepage, news, about, socials, gigs];
 
 export default schemas;
